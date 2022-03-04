@@ -27,7 +27,7 @@ function testChunk() {
 }
 */
 
-function testCompact() {
+/*function testCompact() {
   const items = [0, 1, false, 2, '', 3, null, undefined, '0'];
   const original = [...items];
   const expected = [1, 2, 3, '0'];
@@ -46,8 +46,8 @@ function testCompact() {
   console.assert(naoAlterados, 'array original não pode ser alterado');
   console.assert(resultadoCorreto, 'todos os objetos esperados devem estar presentes');
 }
+*/
 
-/*
 function testFromPairs() {
   const items: KeyAndValue[] = [
     ['name', 'Edgar Allan Poe'],
@@ -66,7 +66,7 @@ function testFromPairs() {
   // verificação do método.
   const correto = Object.keys(esperado).every(key => esperado[key] === resultado[key]);
   console.assert(correto, 'todos os objetos esperados devem estar presentes');
-}*/
+}
 
 /*
 function testUniq() {
@@ -117,7 +117,7 @@ async function testFila() {
 }*/
 
 //testChunk();
-testCompact();
-//testFromPairs();
+//testCompact();
+testFromPairs();
 //testUniq();
 //testFila();
