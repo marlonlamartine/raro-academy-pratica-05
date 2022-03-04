@@ -5,13 +5,14 @@ import { fromPairs } from "./funcoes/fromPairs";
 import { uniq } from "./funcoes/uniq";
 import { consumirDaFila, escreveNaFila, leArquivo, zerarAquivo } from "./funcoes/fila";
 
-
+/*
 function testChunk() {
   const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const original = [...items];
 
   // chamada ao método.
   const chunked = chunk(items, 3);
+  console.log(chunked)
 
   // o array original não pode ser alterado.
   const naoAlterados = original.every((item, index) => item === items[index]);
@@ -24,8 +25,9 @@ function testChunk() {
   console.assert(chunked[2].length === 3, 'terceiro grupo deve ter 3 itens');
   console.assert(chunked[3].length === 1, 'quarto grupo deve ter 1 item');
 }
+*/
 
-function testCompact() {
+/*function testCompact() {
   const items = [0, 1, false, 2, '', 3, null, undefined, '0'];
   const original = [...items];
   const expected = [1, 2, 3, '0'];
@@ -38,11 +40,13 @@ function testCompact() {
 
   // os itens truthy devem ser mantidos no array resultado.
   const resultadoCorreto = expected.every((item, index) => item === resultado[index]);
+  //console.log(resultadoCorreto)
 
   // verificação do método.
   console.assert(naoAlterados, 'array original não pode ser alterado');
   console.assert(resultadoCorreto, 'todos os objetos esperados devem estar presentes');
 }
+*/
 
 function testFromPairs() {
   const items: KeyAndValue[] = [
@@ -64,6 +68,7 @@ function testFromPairs() {
   console.assert(correto, 'todos os objetos esperados devem estar presentes');
 }
 
+/*
 function testUniq() {
   const items = [1, 2, 3, 4, 5, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6];
   const original = [...items];
@@ -76,8 +81,9 @@ function testUniq() {
   const resultadoCorreto = expected.every((item, index) => item === resultado[index]);
   console.assert(naoAlterados, 'array original não pode ser alterado');
   console.assert(resultadoCorreto, 'todos os objetos esperados devem estar presentes');
-}
+}*/
 
+/*
 async function testFila() {
   await zerarAquivo();
   const mensagens = [
@@ -108,10 +114,10 @@ async function testFila() {
     console.log(encontrada);
     console.assert(encontrada === menssagem, 'mensagem esperada não encontrada');
   }
-}
+}*/
 
-testChunk();
-testCompact();
+//testChunk();
+//testCompact();
 testFromPairs();
-testUniq();
-testFila();
+//testUniq();
+//testFila();
