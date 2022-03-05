@@ -9,7 +9,7 @@
  * @returns somente os itens definidos.
  */
  export const compact = (items: unknown[]): unknown[] => {
-   const novoArray:unknown[] = [];
+  const novoArray:unknown[] = [];
 
    items.forEach(function(valor:unknown){
      if(!!valor != false){
