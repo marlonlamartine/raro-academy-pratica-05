@@ -50,3 +50,9 @@ Para executar qualquer um destes comandos, basta você executar, no terminal, o 
 
 Este repositório possui dois diretórios principais: 
 - `src`: pasta onde todas as funções deverão estar implementadas
+
+## Observações
+
+1: Eu desenvolvi primeiro duas issues chunk e compact e upei ao branch develop. Infelizmente ao desenvolver a issue de fromPairs eu dei merge com a branch master. Tentei em vão fazer um revert mas que não funcionou. 
+
+2: Acredito que a função fila esteja incompleta, embora não apresente notificações da console.assert. Compilou e executou sem apresentar erros. Estou entregando às 1:30 da manhã pois tive muita dificuldade com a função fila.
