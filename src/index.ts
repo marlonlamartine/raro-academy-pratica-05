@@ -6,7 +6,7 @@ import { uniq } from "./funcoes/uniq";
 import { consumirDaFila, escreveNaFila, leArquivo, zerarAquivo } from "./funcoes/fila";
 
 
-function testChunk() {
+/*function testChunk() {
   const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const original = [...items];
 
@@ -23,8 +23,9 @@ function testChunk() {
   console.assert(chunked[1].length === 3, 'segundo grupo deve ter 3 itens');
   console.assert(chunked[2].length === 3, 'terceiro grupo deve ter 3 itens');
   console.assert(chunked[3].length === 1, 'quarto grupo deve ter 1 item');
-}
+}*/
 
+/*
 function testCompact() {
   const items = [0, 1, false, 2, '', 3, null, undefined, '0'];
   const original = [...items];
@@ -42,8 +43,9 @@ function testCompact() {
   // verificação do método.
   console.assert(naoAlterados, 'array original não pode ser alterado');
   console.assert(resultadoCorreto, 'todos os objetos esperados devem estar presentes');
-}
+}*/
 
+/*
 function testFromPairs() {
   const items: KeyAndValue[] = [
     ['name', 'Edgar Allan Poe'],
@@ -62,8 +64,9 @@ function testFromPairs() {
   // verificação do método.
   const correto = Object.keys(esperado).every(key => esperado[key] === resultado[key]);
   console.assert(correto, 'todos os objetos esperados devem estar presentes');
-}
+}*/
 
+/*
 function testUniq() {
   const items = [1, 2, 3, 4, 5, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6];
   const original = [...items];
@@ -77,6 +80,7 @@ function testUniq() {
   console.assert(naoAlterados, 'array original não pode ser alterado');
   console.assert(resultadoCorreto, 'todos os objetos esperados devem estar presentes');
 }
+*/
 
 async function testFila() {
   await zerarAquivo();
@@ -97,7 +101,7 @@ async function testFila() {
     await escreveNaFila(mensagem);
   }
 
-  const mensagensEscritas = await leArquivo(() => {});
+  const mensagensEscritas = await leArquivo();
   const todasMensagensEscritas = mensagensEscritas
     .split('\n')
     .every((mensagem, index) => mensagem === mensagens[index]);
@@ -110,8 +114,9 @@ async function testFila() {
   }
 }
 
-testChunk();
-testCompact();
-testFromPairs();
-testUniq();
-testFila();
+
+//testChunk();
+//testCompact();
+//testFromPairs();
+//testUniq();
+testFila().then();
