@@ -66,7 +66,7 @@ function testFromPairs() {
   console.assert(correto, 'todos os objetos esperados devem estar presentes');
 }*/
 
-
+/*
 function testUniq() {
   const items = [1, 2, 3, 4, 5, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6];
   const original = [...items];
@@ -80,8 +80,8 @@ function testUniq() {
   console.assert(naoAlterados, 'array original não pode ser alterado');
   console.assert(resultadoCorreto, 'todos os objetos esperados devem estar presentes');
 }
+*/
 
-/*
 async function testFila() {
   await zerarAquivo();
   const mensagens = [
@@ -101,7 +101,7 @@ async function testFila() {
     await escreveNaFila(mensagem);
   }
 
-  const mensagensEscritas = await leArquivo(() => {});
+  const mensagensEscritas = await leArquivo();
   const todasMensagensEscritas = mensagensEscritas
     .split('\n')
     .every((mensagem, index) => mensagem === mensagens[index]);
@@ -112,11 +112,11 @@ async function testFila() {
     console.log(encontrada);
     console.assert(encontrada === menssagem, 'mensagem esperada não encontrada');
   }
-}*/
+}
 
 
 //testChunk();
 //testCompact();
 //testFromPairs();
-testUniq();
-//testFila();
+//testUniq();
+testFila().then();
